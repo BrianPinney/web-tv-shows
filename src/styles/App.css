@@ -5,13 +5,22 @@
 body {
   background-color: black;
   color: white;
+  font-family: 'Bruno Ace SC', cursive;
 }
- 
+
+.show-input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 .main-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-family: 'Bruno Ace SC', cursive;
+    justify-content: center;
 }
 
 .show-container {

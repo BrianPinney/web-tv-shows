@@ -1,4 +1,5 @@
-import { useEffect } from "react"
+import { useEffect, } from "react"
+import AddShow from "./AddShow"
 
 export default function Home({shows, setShows}){
 
@@ -7,10 +8,15 @@ export default function Home({shows, setShows}){
         .then(resp => resp.json())
         .then(setShows)
         .catch(alert)
-    }, [])
+    }, [shows])
 
     return (
-        <div className="main-container">
+        <>
+        <section className="show-input" >
+            <AddShow />
+        </section>
+        <div className="main-container">  
+            
         {
             !shows
             ? "Loading..."
@@ -25,5 +31,7 @@ export default function Home({shows, setShows}){
             )
         } 
         </div>
+       
+       </>
     )
 }

@@ -5,7 +5,7 @@ export default function AddShow({ setShows }) {
   const [title, setTitle] = useState("");
   const [poster, setPoster] = useState("");
   const [seasons, setSeasons] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleAddShow = (e) => {
     e.preventDefault();
@@ -22,17 +22,18 @@ export default function AddShow({ setShows }) {
           return;
         }
         setShows(data);
-        navigate('/')
+        navigate("/");
       })
       .catch(alert);
   };
 
   return (
+   
     <>
-      <h2>Add Show</h2>
       <form onSubmit={handleAddShow}>
+        <h2>Add Show</h2>
         <label htmlFor="title">
-          Title
+          Title &nbsp;
           <input
             type="text"
             value={title}
@@ -43,7 +44,6 @@ export default function AddShow({ setShows }) {
         </label>
         <br />
         <label htmlFor="poster">
-
           Poster
           <input
             type="text"
@@ -55,7 +55,6 @@ export default function AddShow({ setShows }) {
         </label>
         <br />
         <label htmlFor="seasons">
-          {" "}
           Seasons
           <input
             type="text"
